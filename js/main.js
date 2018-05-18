@@ -1,0 +1,2 @@
+$("#carte").svgPanZoom({
+});
