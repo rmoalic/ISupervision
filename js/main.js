@@ -1,2 +1,3 @@
-$("#carte").svgPanZoom({
+$( document ).ready(function() {
+
 });
