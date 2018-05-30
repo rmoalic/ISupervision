@@ -1,1 +1,47 @@
-<h1>ecran</h1>
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Système de supervision</title>
+	<meta name="description" content="Supervision du système AGATHE">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/ecran.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<div class="grid-container">
+		<div data-area="Urgent">
+			Urgent
+		</div>
+		<div data-area="Infos">
+			Infos
+		</div>
+		<div data-area="Stats">
+			Stats
+		</div>
+		<div data-area="Term">
+			<div id="container">
+				<output></output>
+				<div id="input-line" class="input-line">
+					<div class="prompt"></div>
+					<div><input class="cmdline" autofocus /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/ecran.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+
+</html>
