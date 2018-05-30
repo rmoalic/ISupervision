@@ -19,8 +19,21 @@
   <!--[if lte IE 9]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+  <p style="color: red" id="message">
+    Le nom d'utilisateur ou le mot de passe est incorrect
+  </p>
 
-  <header>
+  <div class="container" id="login">
+    <label for="uname"><b>Nom d'utilistateur</b></label>
+    <input type="text" placeholder="Entrez votre nom d'utilisateur" name="uname" id="uname" required>
+
+    <label for="psw"><b>Mot de passe</b></label>
+    <input type="password" placeholder="Entrez votre mot de passe" name="psw" id="pwd" required>
+
+    <button id="blogin" type="submit">S'identifier</button>
+  </div>
+
+  <header id="page">
     <nav>
 	  <ul>
         <li><a href="camera.html">Caméras</a></li>
@@ -32,6 +45,27 @@
   
   <div id="content">
   </div>
+  
+  <script>
+	var logi = document.getElementById("login");
+	var page = document.getElementById("page");
+	var messagei = document.getElementById("message");
+	page.style.display = "none";
+	messagei.style.display = "none";
+	
+	document.getElementById("blogin").addEventListener('click', e => {
+		var logn = document.getElementById("uname").value;
+		var pwdn = document.getElementById("pwd").value;
+		
+		if (logn == "admin" && pwdn == "admin") {
+			page.style.display = "";
+			logi.style.display = "none";
+			messagei.style.display = "none";
+		} else {
+			messagei.style.display = "";
+		}
+	});
+  </script>
   
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
