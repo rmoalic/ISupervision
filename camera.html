@@ -1,1 +1,77 @@
-<h1>camera</h1>
+<html class="no-js" lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Système de caméra</title>
+  <meta name="description" content="Supervision du système AGATHE">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<style type="text/css">
+
+html{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+li {
+	display: inline;
+        list-style: none;
+	margin: 0px;
+}
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+#global {
+   overflow:auto;
+ }
+</style>
+
+<body>
+
+  <!--<h1>Caméra</h1
+
+  <header>
+    <nav>
+	  <ul>
+        <li><a href="camera.html">Caméras</a></li>
+        <li><a href="carte.html">Carte</a></li>
+        <li><a href="ecran.html">Ecran</a></li>
+      </ul>
+	</nav>
+</header>-->
+
+<li><video id=little_1 width="33%" height="33%" autoplay loop muted >
+    <source src="video/parking.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la balise vidéo.
+  </video>
+  </li>
+
+<li><video id=little_2 width="33%" height="33%" autoplay loop muted >
+  <source src="video/trafic.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+</li>
+
+<li><video id=little_3 width="33%" height="33%" autoplay loop muted >
+  <source src="video/town.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+</li>
+
+<video id=full width="100%" height="100%" autoplay loop muted >
+  <source src="video/town_zoom.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+</body>
+</html>
