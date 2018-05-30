@@ -1,5 +1,5 @@
 ::selection {
-  background: #FF5E99;
+  background: azure;
 }
 
 ::-webkit-scrollbar { 
@@ -23,6 +23,14 @@ body {
 h2 {
 	letter-spacing: 4px;
 	text-align: center;
+}
+
+.vert {
+	color: chartreuse;
+}
+
+.rouge {
+	color: red;
 }
 
 .grid-container {

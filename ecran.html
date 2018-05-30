@@ -22,9 +22,24 @@
 	<div class="grid-container">
 		<div data-area="Urgent">
 			<h2>Incidents</h2>
+			<div class="rouge">
+				<strong>Accident de la route boulevard Hairion</strong><br/>
+				Détails : collision entre un véhicule privé et un enfant<br/>
+				Secours : sur place<br/>
+				Circulation : 1 voie coupée
+			</div>
 		</div>
 		<div data-area="Infos">
 			<h2>Informations générales</h2>
+			Heure : <span id="afficherheure"></span>
+			<script type="text/javascript">
+				setInterval(function(){
+					document.getElementById('afficherheure').innerHTML = new Date().toLocaleTimeString();
+				}, 1000);
+			</script>
+			<div class="vert"><p>État du trafic global : fluide<p></div>
+			<p>Taux de véhicule en circulation : 22%</p>
+			<p>Taux de remplissage des parkings extérieurs : 86%</p>
 		</div>
 		<div data-area="Stats">
 			<h2>Statistiques</h2>
@@ -39,6 +54,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 
 	<script src="js/ecran.js"></script>
     <script src="js/terminal.js"></script>

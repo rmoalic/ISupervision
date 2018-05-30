@@ -1,3 +1,6 @@
+// On remercie Andrew M Barfield pour ce magnifique terminal
+// https://codepen.io/AndrewBarfield/pen/qEqWMq
+
 var util = util || {};
 util.toArray = function(list) {
   return Array.prototype.slice.call(list || [], 0);

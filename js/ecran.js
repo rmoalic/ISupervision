@@ -1,7 +1,7 @@
 $(function() {
   
   // Set the command-line prompt to include the user's IP Address
-  $('.prompt').html('[Admin@Supervision] # ');
+  $('.prompt').html('[admin@Supervision1] # ');
 
   // Initialize a new terminal object
   var term = new Terminal('#input-line .cmdline', '#container output');
