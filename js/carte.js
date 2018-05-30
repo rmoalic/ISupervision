@@ -39,5 +39,5 @@ $( document ).ready(function() {
 	}
 	console.log(matrix);
 	
-	matrix[3][0].setColor("red");
+	//matrix[3][0].setColor("red");
 });

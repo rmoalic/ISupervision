@@ -16,6 +16,10 @@
 
 <style type="text/css">
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html{
     background-color: black;
     height: 100%;
@@ -23,6 +27,7 @@ html{
 }
 li {
 	display: inline;
+  position: relative;
         list-style: none;
 	margin: 0px;
 }
@@ -32,46 +37,109 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
 }
-#global {
-   overflow:auto;
- }
+div {
+  padding-top: 3px;
+}
+span{
+  font-family:  Impact;
+  position: absolute;
+  top: -125px;
+  left : 10px;
+  background: black;
+  color: white;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+  z-index: 2;
+}
+#span_f {
+  top : 35%;
+  left : 20px;
+  font-size: 25px;
+}
+#span_statutF {
+  font-family:  Arial;
+  background: green;
+  top: 40%;
+  left : 20px;
+  font-size: 25px;
+}
+#span_statut {
+  font-family:  Arial;
+  top: 125;
+  right : 10px;
+  left : auto;
+  background: green;
+}
+
 </style>
 
 <body>
 
-  <!--<h1>Caméra</h1
+<li><span id="span_1">ID : PARKING_581</span>
+  <video id="little_1" src="video/parking.mp4" type="video/mp4" width="33%" height="33%" autoplay loop muted >
+  </video><span id="span_statut">STATUT : OK</span>
+</li>
 
-  <header>
-    <nav>
-	  <ul>
-        <li><a href="camera.html">Caméras</a></li>
-        <li><a href="carte.html">Carte</a></li>
-        <li><a href="ecran.html">Ecran</a></li>
-      </ul>
-	</nav>
-</header>-->
-
-<li><video id=little_1 width="33%" height="33%" autoplay loop muted >
-    <source src="video/parking.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la balise vidéo.
-  </video>
+<li><span id="span_2">ID : ROAD_307</span>
+  <video id="little_2" src="video/trafic.mp4" type="video/mp4" width="33%" height="33%" autoplay loop muted >
+</video><span id="span_statut">STATUT : OK</span>
   </li>
 
-<li><video id=little_2 width="33%" height="33%" autoplay loop muted >
-  <source src="video/trafic.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
+<li><span id="span_3">ID : STREET_369</span>
+  <video id="little_3" src="video/town.mp4" type="video/mp4" width="33%" height="33%" autoplay loop muted >
+</video><span id="span_statut">STATUT : OK</span>
 </li>
 
-<li><video id=little_3 width="33%" height="33%" autoplay loop muted >
-  <source src="video/town.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
-</li>
+<div>
+<span id="span_f">ID : STREET_370</span>
+<video id="full" src="video/town_zoom.mp4" type="video/mp4" width="100%" height="100%" autoplay loop muted >
+</video><span id="span_statutF">STATUT : OK</span>
+</div>
 
-<video id=full width="100%" height="100%" autoplay loop muted >
-  <source src="video/town_zoom.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
 </body>
 </html>
+
+<script type="text/javascript">
+
+var videoFull = document.getElementById("full");
+var video1 = document.getElementById("little_1");
+var video2 = document.getElementById("little_2");
+var video3 = document.getElementById("little_3");
+var span1 = document.getElementById("span_1");
+var span2 = document.getElementById("span_2");
+var span3 = document.getElementById("span_3");
+var spanf = document.getElementById("span_f");
+
+video1.addEventListener("click", clickButtonHandler1, false);
+video2.addEventListener("click", clickButtonHandler2, false);
+video3.addEventListener("click", clickButtonHandler3, false);
+
+function clickButtonHandler1() {
+    let v1 = video1.src;
+    video1.src=videoFull.src;
+    videoFull.src = v1;
+    let s1 = span1.textContent;
+    span1.textContent=spanf.textContent;
+    spanf.textContent=s1;
+}
+
+function clickButtonHandler2() {
+  let v2 = video2.src;
+  video2.src=videoFull.src;
+  videoFull.src = v2;
+  let s2 = span2.textContent;
+  span2.textContent=spanf.textContent;
+  spanf.textContent=s2;
+}
+
+function clickButtonHandler3() {
+  let v3 = video3.src;
+  video3.src=videoFull.src;
+  videoFull.src = v3;
+  let s3 = span3.textContent;
+  span3.textContent=spanf.textContent;
+  spanf.textContent=s3;
+}
+
+</script>

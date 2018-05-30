@@ -42,21 +42,21 @@
       </ul>
 	</nav>
   </header>
-  
+
   <div id="content">
   </div>
-  
+
   <script>
 	var logi = document.getElementById("login");
 	var page = document.getElementById("page");
 	var messagei = document.getElementById("message");
 	page.style.display = "none";
 	messagei.style.display = "none";
-	
+
 	document.getElementById("blogin").addEventListener('click', e => {
 		var logn = document.getElementById("uname").value;
 		var pwdn = document.getElementById("pwd").value;
-		
+
 		if (logn == "admin" && pwdn == "admin") {
 			page.style.display = "";
 			logi.style.display = "none";
@@ -66,10 +66,11 @@
 		}
 	});
   </script>
-  
+
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 </html>
