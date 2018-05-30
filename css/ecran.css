@@ -20,6 +20,11 @@ body {
 	background-color: white;
 }
 
+h2 {
+	letter-spacing: 4px;
+	text-align: center;
+}
+
 .grid-container {
 	height: 100%;
     display: grid;
@@ -31,16 +36,19 @@ body {
 [data-area="Urgent"] {
     grid-area: 1 / 1 / 1 / 1;
 	background-color: black;
+	padding: .1em 1.5em 1em 1em;
 }
 
 [data-area="Infos"] {
     grid-area: 1 / 2 / 1 / 2;
 	background-color: black;
+	padding: .1em 1.5em 1em 1em;
 }
 
 [data-area="Stats"] {
     grid-area: 2 / 2 / 2 / 2;
 	background-color: black;
+	padding: .1em 1.5em 1em 1em;
 }
 
 [data-area="Term"] {
@@ -55,6 +63,9 @@ body {
 #container output {
   clear: both;
   width: 100%;
+}
+#container output h2 {
+  text-align: left;
 }
 #container output h3 {
   margin: 0;
@@ -111,4 +122,27 @@ body {
   -moz-column-width: 100px;
   -o-column-width: 100px;
   column-width: 100px;
+}
+
+.clock-container {
+  display: none /*inline-block*/;
+  position: relative;
+  width: 200px;
+  vertical-align: middle;
+  overflow: hidden;
+} 
+
+.clock-container > svg > circle {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+.hour, .min, .sec { 
+  stroke-width: 1px;
+  fill: #333;
+  stroke: #555;
+}
+
+.sec {
+   stroke: #f55;
 }
