@@ -32,18 +32,17 @@
 		</div>
 		<div data-area="Infos">
 			<h2>Informations générales</h2>
-			Heure : <span id="afficherheure"></span>
-			<script type="text/javascript">
-				setInterval(function(){
-					document.getElementById('afficherheure').innerHTML = new Date().toLocaleTimeString();
-				}, 1000);
-			</script>
-			<div class="vert"><p>État du trafic global : fluide<p></div>
+			<p>Heure : <span id="afficherheure"></span></p>
+			<div class="orange">Conditions météo : brumeux</div>
+			<div class="vert"><p>État du trafic global : fluide<p>
+			<p>Vitesse moyenne : 45 km/h</p></div>
+			
 			<p>Taux de véhicule en circulation : 22%</p>
 			<p>Taux de remplissage des parkings extérieurs : 86%</p>
 		</div>
 		<div data-area="Stats">
 			<h2>Statistiques</h2>
+			<p><i>Fonctionnalités à venir...</i></p>
 		</div>
 		<div data-area="Term">
 			<div id="container">
@@ -56,7 +55,11 @@
 		</div>
 	</div>
 	
-	
+	<script type="text/javascript">
+		setInterval(function(){
+			document.getElementById('afficherheure').innerHTML = new Date().toLocaleTimeString();
+		}, 1000);
+	</script>
 
 	<script src="js/ecran.js"></script>
     <script src="js/terminal.js"></script>

@@ -33,6 +33,10 @@ h2 {
 	color: red;
 }
 
+.orange {
+	color: orange;
+}
+
 .grid-container {
 	height: 100%;
     display: grid;
