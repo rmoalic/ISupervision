@@ -15,6 +15,45 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+<style type="text/css">
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html{
+    background-color: black;
+    color: white;
+}
+#login{
+  margin-top: 10%;
+  margin-bottom: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: black;
+}
+#logo{
+  margin-left: 38%;
+  margin-top: 10%;
+}
+#page{
+  margin-top: 10%;
+  margin-bottom: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#message{
+  font-size: 25px;
+}
+
+a:visited,a {
+  color: white;
+  font-size: 25px;
+
+}
+
+</style>
+
 <body>
   <!--[if lte IE 9]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -22,6 +61,10 @@
   <p style="color: red" id="message">
     Le nom d'utilisateur ou le mot de passe est incorrect
   </p>
+
+  <div id="logo">
+    <object id="image" data="img/logo.png" type="image/png"></object>
+  </div>
 
   <div class="container" id="login">
     <label for="uname"><b>Nom d'utilisateur</b></label>
@@ -36,9 +79,9 @@
   <header id="page">
     <nav>
 	  <ul>
-        <li><a href="camera.html" target="_blank">Caméras</a></li>
+      <li><a href="ecran.html" target="_blank">Ecran</a></li>
         <li><a href="carte.html" target="_blank">Carte</a></li>
-        <li><a href="ecran.html" target="_blank">Ecran</a></li>
+        <li><a href="camera.html" target="_blank">Caméras</a></li>
       </ul>
 	</nav>
   </header>
