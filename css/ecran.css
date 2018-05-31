@@ -14,7 +14,7 @@ html {
 
 body {
 	height: 100%;
-	font-size: 11pt;
+	font-size: 14pt;
 	font-family: Inconsolata, monospace;
 	color: white;
 	background-color: white;
@@ -30,7 +30,7 @@ h2 {
 }
 
 .rouge {
-	color: red;
+	color: tomato;
 }
 
 .orange {
